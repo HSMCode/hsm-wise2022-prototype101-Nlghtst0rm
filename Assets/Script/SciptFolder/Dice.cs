@@ -7,7 +7,10 @@ public class Dice : MonoBehaviour
 {
     //Variables
     public int diceNumber;
-    public int diceSites = 6;
+    public int diceSites = 50;
+    public AudioSource source;
+    public AudioClip clip;
+
 
 
     // Start is called before the first frame update
@@ -17,13 +20,15 @@ public class Dice : MonoBehaviour
      
      Debug.Log("You rolled a " + diceNumber);
 
-     //if the number is greater than 3 you win
-    if (diceNumber > 3)
+     //if the number is less than 9 you win
+    if (diceNumber < 9)
             {
                 Debug.Log("You won!");
+                source.PlayOneShot(clip);
             }
    
    
+
    // if not, you loose
     else 
             {

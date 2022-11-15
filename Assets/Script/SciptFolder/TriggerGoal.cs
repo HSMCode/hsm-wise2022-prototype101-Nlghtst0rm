@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class TriggerGoal : MonoBehaviour
 {
+    public ParticleSystem source;
     void OnTriggerEnter(Collider other)
 {
     Debug.Log("You Won!");
+    source.Play();
 
 }
     // Start is called before the first frame update
