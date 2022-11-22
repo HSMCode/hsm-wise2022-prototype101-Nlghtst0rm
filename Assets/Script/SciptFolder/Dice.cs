@@ -10,7 +10,7 @@ public class Dice : MonoBehaviour
     public int diceSites = 50;
     public AudioSource source;
     public AudioClip clip;
-
+    public ParticleSystem source2;
 
 
     // Start is called before the first frame update
@@ -24,7 +24,9 @@ public class Dice : MonoBehaviour
     if (diceNumber < 9)
             {
                 Debug.Log("You won!");
+                //soundeffect win
                 source.PlayOneShot(clip);
+                source2.Play();
             }
    
    
