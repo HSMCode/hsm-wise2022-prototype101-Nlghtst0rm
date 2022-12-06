@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 10;
-        turnspeed = 3;
-        jumphight = 6;
-        GroundDistance = 0.2f;
+        speed = 5;
+        turnspeed = 250;
+        jumphight = 4;
+        GroundDistance = 0.03f;
 
        _playerAnim = GetComponent<Animator>();
        
@@ -67,5 +67,15 @@ public class PlayerController : MonoBehaviour
      {
         _playerAnim.SetBool("IsRunning", false);
      }
+      if(isGrounded)
+      {
+          _playerAnim.SetBool("IsJumping", false);
+          
+      }
+      else
+      {
+         _playerAnim.SetBool("IsJumping", true);
+      }
+
     }
 }
