@@ -8,20 +8,24 @@ public class MoveEnemy : MonoBehaviour
 {
         public NavMeshAgent enemy;
         public Transform Player;
-
-
+        
+    
 
     // Start is called before the first frame update
-    void Start()
-
-        
+    void Start() 
     {
-       
+  
     }
 
     // Update is called once per frame
     void Update()
     {
+       
         enemy.SetDestination(Player.position);
+        
     }
+    
+       
+
+    
 }
